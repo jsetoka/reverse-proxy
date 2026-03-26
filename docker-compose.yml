@@ -2,6 +2,7 @@ services:
   nginx:
     image: nginx:alpine
     container_name: global-nginx
+    user: "${UID}:${GID}"
     volumes:
       - ./conf.d:/etc/nginx/conf.d:ro
       - /etc/letsencrypt:/etc/letsencrypt:ro
