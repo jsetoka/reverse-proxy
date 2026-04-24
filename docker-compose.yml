@@ -2,7 +2,6 @@ services:
   nginx:
     image: nginx:alpine
     container_name: global-nginx
-    user: "${UID}:${GID}"
     volumes:
       - ./conf.d:/etc/nginx/conf.d:ro
       - /etc/letsencrypt:/etc/letsencrypt:ro
@@ -11,6 +10,8 @@ services:
       - /home/ubuntu/apps/oic/media:/srv/oic/media:ro
       - /home/ubuntu/apps/kerenes-digital/staticfiles:/srv/kerenes/staticfiles:ro
       - /home/ubuntu/apps/kerenes-digital/media:/srv/kerenes/media:ro
+      - /home/ubuntu/apps/immo-saas/staticfiles:/srv/kerenesimmo/staticfiles:ro
+      - /home/ubuntu/apps/immo-saas/media:/srv/kerenesimmo/media:ro
     ports:
       - "80:80"
       - "443:443"
