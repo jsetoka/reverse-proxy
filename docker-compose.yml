@@ -10,8 +10,8 @@ services:
       - /home/ubuntu/apps/oic/media:/srv/oic/media:ro
       - /home/ubuntu/apps/kerenes-digital/staticfiles:/srv/kerenes/staticfiles:ro
       - /home/ubuntu/apps/kerenes-digital/media:/srv/kerenes/media:ro
-      - /home/ubuntu/apps/immo-saas/staticfiles:/srv/kerenesimmo/staticfiles:ro
-      - /home/ubuntu/apps/immo-saas/media:/srv/kerenesimmo/media:ro
+      - /home/ubuntu/apps/kerenesimmo/staticfiles:/srv/kerenesimmo/staticfiles:ro
+      - /home/ubuntu/apps/kerenesimmo/media:/srv/kerenesimmo/media:ro
     ports:
       - "80:80"
       - "443:443"
